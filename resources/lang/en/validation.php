@@ -143,6 +143,27 @@ return [
         'confirm-password' => [
             'required' => 'Vul je wachtwoord in.'
         ],
+        'merk' => [
+            'required' => 'Vul het merk in.'
+        ],
+        'type' => [
+            'required' => 'Vul het type in.'
+        ],
+        'bouwdatum' => [
+            'required' => 'Vul het bouwjaar in.'
+        ],
+        'image' => [
+            'required' => 'Selecteer een afbeelding.'
+        ],
+        'inkoop' => [
+            'required' => 'Vul de inkoop prijs in.'
+        ],
+        'verkoop' => [
+            'required' => 'Vul de verkoop prijs in.'
+        ],
+        'kenteken' => [
+            'required' => 'Vul het kenteken in.'
+        ]
     ],
 
     /*
