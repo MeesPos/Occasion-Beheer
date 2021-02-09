@@ -1,8 +1,7 @@
 @extends('layouts.master', ['title' => 'Auto Wijzigen'])
 
-@include('partials.page-head', ['title' => 'Auto Wijzigen'])
-
 @section('main')
+@include('partials.page-head', ['title' => 'Auto Wijzigen'])
     @foreach ($car as $row)
         <form action="{{ route('insert-change', ['id' => $row['id']]) }}" class="space-y-8 divide-y divide-gray-200 w-10/12 mx-auto my-4"
             method="post" enctype="multipart/form-data">

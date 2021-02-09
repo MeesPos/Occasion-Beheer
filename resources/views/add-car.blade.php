@@ -1,8 +1,7 @@
 @extends('layouts.master', ['title' => 'Auto Toevoegen'])
 
-@include('partials.page-head', ['title' => 'Auto Toevoegen'])
-
 @section('main')
+@include('partials.page-head', ['title' => 'Auto Toevoegen'])
     <form action="{{ route('include-car') }}" class="space-y-8 divide-y divide-gray-200 w-10/12 mx-auto my-4"
         method="post" enctype="multipart/form-data">
         @csrf
@@ -66,7 +65,7 @@
                             Merk
                         </label>
                         <div class="mt-1">
-                            <input type="text" name="merk" id="merk" autocomplete="merk"
+                            <input type="text" name="merk" id="merk" autocomplete="merk" value="{{old('merk')}}"
                                 class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
                         </div>
                         @error('merk')
@@ -81,7 +80,7 @@
                             Type
                         </label>
                         <div class="mt-1">
-                            <input type="text" name="type" id="type" autocomplete="type"
+                            <input type="text" name="type" id="type" autocomplete="type" value="{{old('type')}}"
                                 class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
                         </div>
                         @error('type')
@@ -96,7 +95,7 @@
                             Bouwdatum
                         </label>
                         <div class="mt-1">
-                            <input type="date" name="bouwdatum" id="bouwdatum" autocomplete="bouwdatum"
+                            <input type="date" name="bouwdatum" id="bouwdatum" autocomplete="bouwdatum" value="{{old('bouwdatum')}}"
                                 class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
                         </div>
                         @error('bouwdatum')
@@ -161,7 +160,7 @@
                             class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">
                             &euro;
                         </span>
-                        <input type="number" name="inkoop" id="inkoop" autocomplete="inkoop"
+                        <input type="number" name="inkoop" id="inkoop" autocomplete="inkoop" value="{{old('inkoop')}}"
                             class="flex-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
                     </div>
                     @error('inkoop')
@@ -180,7 +179,7 @@
                             class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">
                             &euro;
                         </span>
-                        <input type="number" name="verkoop" id="verkoop" autocomplete="verkoop"
+                        <input type="number" name="verkoop" id="verkoop" autocomplete="verkoop" value="{{old('verkoop')}}"
                             class="flex-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
                     </div>
                     @error('verkoop')
@@ -195,7 +194,7 @@
                         Kenteken
                     </label>
                     <div class="mt-1">
-                        <input type="text" name="kenteken" id="kenteken" autocomplete="kenteken"
+                        <input type="text" name="kenteken" id="kenteken" autocomplete="kenteken" value="{{old('kenteken')}}"
                             class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
                     </div>
                     @error('kenteken')
