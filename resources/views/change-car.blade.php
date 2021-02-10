@@ -116,7 +116,7 @@
                             <label for="file-upload"
                                 class="relative cursor-pointer bg-white rounded-md font-medium focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500 mx-auto">
                                 @if ($row['image'] != '')
-                                    <img src="{{ asset('storage/' . $row['image']) }}" class="w-72 h-72 mx-auto">
+                                    <img src="{{ asset('storage/' . $row['image']) }}" class="w-72 h-auto mx-auto">
                                     <a href="{{route('delete-image', ['id' => $row['id']])}}" class="ml-3 mt-4 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
                                             Verwijderen
                                     </a>
